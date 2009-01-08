@@ -6,8 +6,4 @@ class Location < ActiveRecord::Base
   def encoded
     id.to_s(36)
   end
-  
-  def decoded
-    id.to_s(36).to_i(36)
-  end
 end

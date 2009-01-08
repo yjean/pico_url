@@ -15,15 +15,15 @@ class LocationsController < ApplicationController
   def show
     if params[:tinyurl]
       begin
-        location = Location.find_by_id(params[:tinyurl])
+        location = Location.find_by_id(params[:tinyurl].to_i(36))
         redirect_to location.url, :status => :moved_permanently
       rescue Exception => e
-        # i try to use flash[:error] but it's displayed :-(
+        # i try to use flash[:error] but it's not displayed :-(
         # flash[:error] = 'This pico_url doesn\'t exists. Please enter below the full url.'
         flash[:notice] = 'This pico_url doesn\'t exists. Please enter below the full url.'
         redirect_to :action => "new"
       end
-    else
+    elsif params[:id]
       @location = Location.find(params[:id])
       respond_to do |format|
         format.html # show.html.erb
