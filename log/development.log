@@ -6257,3 +6257,575 @@ Processing LocationsController#new (for 127.0.0.1 at 2009-01-07 22:32:03) [GET]
 Rendering template within layouts/locations
 Rendering locations/new
 Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2009-01-08 09:49:14) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:49:16) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:49:19) [GET]
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:49:38) [GET]
+  [4;36;1mLocation Load (0.7ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:49:55) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:50:06) [GET]
+  [4;36;1mLocation Load (0.7ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+
+
+ActionView::TemplateError (illegal radix 64) on line #11 of app/views/locations/index.html.erb:
+8: <% for location in @locations %>
+9:   <tr>
+10:     <td><%=h location.url %></td>
+11:     <td><%= link_to 'Show', location %></td>
+12:     <td><%= link_to 'Edit', edit_location_path(location) %></td>
+13:     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+14:   </tr>
+
+    app/models/location.rb:7:in `to_s'
+    app/models/location.rb:7:in `to_param'
+    generated code (/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route.rb:145):5:in `generate_raw'
+    generated code (/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route.rb:154):2:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/url_rewriter.rb:208:in `rewrite_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/url_rewriter.rb:187:in `rewrite_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/url_rewriter.rb:165:in `rewrite'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:626:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    (eval):16:in `location_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `polymorphic_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:119:in `polymorphic_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:91:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/locations/index.html.erb:11
+    app/views/locations/index.html.erb:8:in `each'
+    app/views/locations/index.html.erb:8
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/locations_controller.rb:7:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/rack/adapter/rails.rb:54:in `serve_rails'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/rack/adapter/rails.rb:74:in `call'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:63:in `pre_process'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:54:in `process'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:39:in `receive_data'
+    /Library/Ruby/Gems/1.8/gems/eventmachine-0.12.2/lib/eventmachine.rb:231:in `run_machine'
+    /Library/Ruby/Gems/1.8/gems/eventmachine-0.12.2/lib/eventmachine.rb:231:in `run'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/backends/base.rb:57:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/server.rb:150:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/controllers/controller.rb:80:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:173:in `send'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:173:in `run_command'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:139:in `run!'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/bin/thin:6
+    /usr/bin/thin:19:in `load'
+    /usr/bin/thin:19
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (37.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.2ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:50:11) [GET]
+  [4;35;1mLocation Load (0.8ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:50:19) [GET]
+  [4;36;1mLocation Load (0.7ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:50:25) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #11 of app/views/locations/index.html.erb:
+8: <% for location in @locations %>
+9:   <tr>
+10:     <td><%=h location.url %></td>
+11:     <td><%= link_to 'Show', location %></td>
+12:     <td><%= link_to 'Edit', edit_location_path(location) %></td>
+13:     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+14:   </tr>
+
+    app/models/location.rb:7:in `to_s'
+    app/models/location.rb:7:in `to_param'
+    generated code (/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route.rb:145):5:in `generate_raw'
+    generated code (/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route.rb:154):2:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/url_rewriter.rb:208:in `rewrite_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/url_rewriter.rb:187:in `rewrite_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/url_rewriter.rb:165:in `rewrite'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:626:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    (eval):16:in `location_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `polymorphic_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:119:in `polymorphic_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:91:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/locations/index.html.erb:11
+    app/views/locations/index.html.erb:8:in `each'
+    app/views/locations/index.html.erb:8
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/locations_controller.rb:7:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/rack/adapter/rails.rb:54:in `serve_rails'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/rack/adapter/rails.rb:74:in `call'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:63:in `pre_process'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:54:in `process'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:39:in `receive_data'
+    /Library/Ruby/Gems/1.8/gems/eventmachine-0.12.2/lib/eventmachine.rb:231:in `run_machine'
+    /Library/Ruby/Gems/1.8/gems/eventmachine-0.12.2/lib/eventmachine.rb:231:in `run'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/backends/base.rb:57:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/server.rb:150:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/controllers/controller.rb:80:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:173:in `send'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:173:in `run_command'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:139:in `run!'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/bin/thin:6
+    /usr/bin/thin:19:in `load'
+    /usr/bin/thin:19
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (32.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.6ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:50:34) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:50:46) [GET]
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:52:05) [GET]
+  [4;36;1mLocation Load (0.7ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:52:51) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-01-08 09:53:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-01-08 09:53:24) [GET]
+  Parameters: {"tinyurl"=>"3"}
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = '3') LIMIT 1[0m
+Redirected to http://czj.campfirenow.com/room/197834
+Completed in 6ms (DB: 0) | 301 Moved Permanently [http://localhost/3]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:55:52) [GET]
+  [4;36;1mLocation Load (0.9ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:55:53) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:55:54) [GET]
+  [4;36;1mLocation Load (0.8ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:01) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:18) [GET]
+  [4;36;1mLocation Load (0.7ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:38) [GET]
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:43) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 70ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:48) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:51) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:58) [GET]
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:56:59) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:04) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:04) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:13) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:14) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:19) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:25) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:32) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:33) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:44) [GET]
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:45) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:50) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:51) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:57:54) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:58:24) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+
+
+ActionView::TemplateError (undefined method `unhash' for "9ix":String) on line #12 of app/views/locations/index.html.erb:
+9: <% for location in @locations %>
+10:   <tr>
+11:     <td><%=h location.url %></td>
+12:     <td><%=h location.key %> -> <%=h location.unkey %></td>
+13:     <td><%= link_to 'Show', location %></td>
+14:     <td><%= link_to 'Edit', edit_location_path(location) %></td>
+15:     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/models/location.rb:11:in `unkey'
+    app/views/locations/index.html.erb:12
+    app/views/locations/index.html.erb:9:in `each'
+    app/views/locations/index.html.erb:9
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/locations_controller.rb:7:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/rack/adapter/rails.rb:54:in `serve_rails'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/rack/adapter/rails.rb:74:in `call'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:63:in `pre_process'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:54:in `process'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/connection.rb:39:in `receive_data'
+    /Library/Ruby/Gems/1.8/gems/eventmachine-0.12.2/lib/eventmachine.rb:231:in `run_machine'
+    /Library/Ruby/Gems/1.8/gems/eventmachine-0.12.2/lib/eventmachine.rb:231:in `run'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/backends/base.rb:57:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/server.rb:150:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/controllers/controller.rb:80:in `start'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:173:in `send'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:173:in `run_command'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/lib/thin/runner.rb:139:in `run!'
+    /Library/Ruby/Gems/1.8/gems/thin-1.0.0/bin/thin:6
+    /usr/bin/thin:19:in `load'
+    /usr/bin/thin:19
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (26.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:58:34) [GET]
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:59:14) [GET]
+  [4;36;1mLocation Load (0.8ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-01-08 09:59:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-01-08 09:59:17) [GET]
+  [4;36;1mLocation Load (0.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/locations]
