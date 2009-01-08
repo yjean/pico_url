@@ -13,11 +13,22 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.xml
   def show
-    @location = Location.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @location }
+    if params[:tinyurl]
+      begin
+        location = Location.find_by_id(params[:tinyurl])
+        redirect_to location.url, :status => :moved_permanently
+      rescue Exception => e
+        # i try to use flash[:error] but it's displayed :-(
+        # flash[:error] = 'This pico_url doesn\'t exists. Please enter below the full url.'
+        flash[:notice] = 'This pico_url doesn\'t exists. Please enter below the full url.'
+        redirect_to :action => "new"
+      end
+    else
+      @location = Location.find(params[:id])
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @location }
+      end
     end
   end
 
@@ -48,7 +59,11 @@ class LocationsController < ApplicationController
         format.html { redirect_to(@location) }
         format.xml  { render :xml => @location, :status => :created, :location => @location }
       else
-        format.html { render :action => "new" }
+        format.html { 
+          loc = Location.find_by_url(params[:location][:url])
+          # render :action => "show" 
+          redirect_to(loc)
+        }
         format.xml  { render :xml => @location.errors, :status => :unprocessable_entity }
       end
     end
